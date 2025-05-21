@@ -1,4 +1,4 @@
-# poolControlle
+# Project Pool Controller
 
 This software is designed to run in NodeJS on a Raspberry PI, and connect to Home Assistant over MQTT, and to pool valve controller boards I designed over I2C. The firmware for the controller board is located in the poolValveBoard folder.
 
