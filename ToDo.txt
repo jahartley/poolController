@@ -1,0 +1,56 @@
+make valve objects call i2c commands for the valves
+	Break up time into two bytes using buf.writeInt16BE(value, offset)
+
+
+
+
+make solarHeat module, call every 5 min.
+
+make freezeProtect module, call every 5 min.
+
+
+
+
+
+
+
+
+POOL VALVE BOARD DESIGN DOC...
+registerMap[0]		program status
+registerMap[1] 		data status
+registerMap[2]		output pin values
+registerMap[3-x]	data to read out
+
+
+commands
+	220-223 direction hightime lowtime (set output relay)
+	230-233 readADC
+	240-248 read 1wire
+	249 how many 1wire 
+	210 read VCC
+	211 read core temp
+
+
+registerMap[0] values			registerMap[1] values
+255 reset 						255 data has not been read
+254 startup						254 read unknown data
+253
+252 command too long			252 command too long
+251 command recieved			251 command recieved
+
+249 count ready
+248 temp ready					248 temp was read
+241 temps ready to read 		241 oneWire data already read
+240 readTemps oneWire
+
+238 adc ready to read 			238 adc data already read
+230-233 readADC
+
+229 move complete map[2] 220-3	
+228 already in use map[2] 220-3
+224-227 stop moving				
+220-223 moving relay 0-3		220-223 move complete
+
+210 read VCC ready				210 vcc already read		
+211 read core temp ready		211 core temp already read
+

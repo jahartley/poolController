@@ -1,0 +1,27 @@
+{
+  "name": "poolController",
+  "version": "0.1.0",
+  "description": "Pool control state machine",
+  "main": "poolPrototypes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahartley/poolController.git"
+  },
+  "author": "Judson Hartley <gitprojects@jahartley.com> (https://www.jahartley.com)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jahartley/poolController/issues"
+  },
+  "homepage": "https://github.com/jahartley/poolController#readme",
+  "dependencies": {
+    "@jahartley/mcp23017": "^1.0.0",
+    "async-mqtt": "^2.6.1",
+    "cron": "^1.8.2",
+    "i2c-bus": "^5.2.0",
+    "nano": "^8.2.2",
+    "stent": "^8.0.0"
+  }
+}
